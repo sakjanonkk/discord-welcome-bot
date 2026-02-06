@@ -1,0 +1,19 @@
+{
+  "name": "discord-welcome-bot",
+  "version": "1.0.0",
+  "description": "Discord Welcome Bot for HEAVEN OF GOD server",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "keywords": ["discord", "bot", "welcome"],
+  "author": "Secretary (เลขาสุดน่ารัก)",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.17.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
