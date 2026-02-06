@@ -65,8 +65,8 @@ client.on('guildMemberAdd', async (member) => {
     // Get member count
     const memberCount = member.guild.memberCount;
     
-    // Create attachment from URL
-    const welcomeAttachment = new AttachmentBuilder(WELCOME_GIF, { name: 'welcome.jpg' });
+    // Create attachment from local file
+    const welcomeAttachment = new AttachmentBuilder('./assets/welcome-wide.jpg', { name: 'welcome.jpg' });
     
     // Create embed message
     const welcomeEmbed = new EmbedBuilder()

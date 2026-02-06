@@ -11,6 +11,9 @@ RUN npm ci --only=production
 # Copy application files
 COPY index.js ./
 
+# Copy assets
+COPY assets ./assets
+
 # Run as non-root user
 USER node
 
