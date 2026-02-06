@@ -10,7 +10,7 @@ const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 const GUILD_ID = process.env.DISCORD_GUILD_ID;
 const WELCOME_CHANNEL_ID = process.env.DISCORD_WELCOME_CHANNEL_ID;
-const WELCOME_GIF = process.env.DISCORD_WELCOME_GIF || 'https://raw.githubusercontent.com/sakjanonkk/discord-welcome-bot/master/assets/welcome-wide.jpg';
+const WELCOME_GIF = process.env.DISCORD_WELCOME_GIF || 'https://cdn.jsdelivr.net/gh/sakjanonkk/discord-welcome-bot@master/assets/welcome-wide.jpg';
 
 // Validation
 if (!BOT_TOKEN) {
