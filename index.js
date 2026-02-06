@@ -72,7 +72,7 @@ client.on('guildMemberAdd', async (member) => {
     const welcomeEmbed = new EmbedBuilder()
       .setColor('#FFD700') // Gold color
       .setTitle('🌙 ยินดีต้อนรับสู่ HEAVEN OF GOD! ✨')
-      .setDescription(`สวัสดีค่าบพี่ ${member}!\nคุณเป็นสมาชิกคนที่ **#${memberCount}** 🎉\nเริ่มสนุกกันเลย! 💕`)
+      .setDescription(`สวัสดีค่าบพี่ ${member}!\n\nคุณเป็นสมาชิกคนที่ **#${memberCount}** 🎉\n\nเริ่มสนุกกันเลย! 💕`)
       .setThumbnail(member.user.displayAvatarURL({ size: 256 }))
       .setImage('attachment://welcome.jpg')
       .setFooter({ 
