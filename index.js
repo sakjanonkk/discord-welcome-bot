@@ -70,11 +70,11 @@ client.on('guildMemberAdd', async (member) => {
       .setColor('#FFD700') // Gold color
       .setTitle('🌙 ยินดีต้อนรับสู่ HEAVEN OF GOD\'s Discord! ✨')
       .setDescription(`สวัสดีค่าบพี่ ${member}!\n\nคุณเป็นสมาชิกคนที่ **#${memberCount}** 🎉\n\nเริ่มสนุกกันเลย! 💕`)
-      .setThumbnail(member.user.displayAvatarURL({ dynamic: true, size: 256 }))
-      .setImage(WELCOME_GIF)
+      .setThumbnail(member.user.displayAvatarURL({ size: 256 }))
+      .setImage('https://media.tenor.com/f5dvtvVP1ZXAAAAd/f5dvtvVP1ZX.gif')
       .setFooter({ 
         text: `Welcome to Heaven of God • ${new Date().toLocaleDateString('th-TH')}`,
-        iconURL: member.guild.iconURL({ dynamic: true })
+        iconURL: member.guild.iconURL()
       })
       .setTimestamp();
     
