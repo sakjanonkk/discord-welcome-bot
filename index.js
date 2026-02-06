@@ -4,7 +4,7 @@
  * Auto-send welcome message when new members join
  */
 
-const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
+const { Client, GatewayIntentBits, EmbedBuilder, AttachmentBuilder } = require('discord.js');
 
 // Config from environment variables
 const BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
@@ -65,13 +65,16 @@ client.on('guildMemberAdd', async (member) => {
     // Get member count
     const memberCount = member.guild.memberCount;
     
+    // Create attachment from URL
+    const welcomeAttachment = new AttachmentBuilder(WELCOME_GIF, { name: 'welcome.jpg' });
+    
     // Create embed message
     const welcomeEmbed = new EmbedBuilder()
       .setColor('#FFD700') // Gold color
       .setTitle('🌙 ยินดีต้อนรับสู่ HEAVEN OF GOD\'s Discord! ✨')
       .setDescription(`สวัสดีค่าบพี่ ${member}!\n\nคุณเป็นสมาชิกคนที่ **#${memberCount}** 🎉\n\nเริ่มสนุกกันเลย! 💕`)
       .setThumbnail(member.user.displayAvatarURL({ size: 256 }))
-      .setImage(WELCOME_GIF)
+      .setImage('attachment://welcome.jpg')
       .setFooter({ 
         text: `Welcome to Heaven of God • ${new Date().toLocaleDateString('th-TH')}`,
         iconURL: member.guild.iconURL()
@@ -81,7 +84,8 @@ client.on('guildMemberAdd', async (member) => {
     // Send welcome message
     await channel.send({ 
       content: `${member}`, // Mention the user
-      embeds: [welcomeEmbed] 
+      embeds: [welcomeEmbed],
+      files: [welcomeAttachment]
     });
     
     console.log(`✅ Welcome message sent to ${member.user.tag} (Member #${memberCount})`);
