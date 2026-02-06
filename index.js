@@ -10,7 +10,7 @@ const { Client, GatewayIntentBits, EmbedBuilder } = require('discord.js');
 const BOT_TOKEN = process.env.DISCORD_BOT_TOKEN;
 const GUILD_ID = process.env.DISCORD_GUILD_ID;
 const WELCOME_CHANNEL_ID = process.env.DISCORD_WELCOME_CHANNEL_ID;
-const WELCOME_GIF = process.env.DISCORD_WELCOME_GIF || 'https://raw.githubusercontent.com/sakjanonkk/discord-welcome-bot/master/assets/welcome.jpg';
+const WELCOME_GIF = process.env.DISCORD_WELCOME_GIF || 'https://raw.githubusercontent.com/sakjanonkk/discord-welcome-bot/master/assets/welcome-wide.gif';
 
 // Validation
 if (!BOT_TOKEN) {
@@ -71,7 +71,7 @@ client.on('guildMemberAdd', async (member) => {
       .setTitle('🌙 ยินดีต้อนรับสู่ HEAVEN OF GOD\'s Discord! ✨')
       .setDescription(`สวัสดีค่าบพี่ ${member}!\n\nคุณเป็นสมาชิกคนที่ **#${memberCount}** 🎉\n\nเริ่มสนุกกันเลย! 💕`)
       .setThumbnail(member.user.displayAvatarURL({ size: 256 }))
-      .setImage('https://raw.githubusercontent.com/sakjanonkk/discord-welcome-bot/master/assets/welcome.jpg')
+      .setImage(WELCOME_GIF)
       .setFooter({ 
         text: `Welcome to Heaven of God • ${new Date().toLocaleDateString('th-TH')}`,
         iconURL: member.guild.iconURL()
