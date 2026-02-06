@@ -71,7 +71,7 @@ client.on('guildMemberAdd', async (member) => {
       .setTitle('🌙 ยินดีต้อนรับสู่ HEAVEN OF GOD\'s Discord! ✨')
       .setDescription(`สวัสดีค่าบพี่ ${member}!\n\nคุณเป็นสมาชิกคนที่ **#${memberCount}** 🎉\n\nเริ่มสนุกกันเลย! 💕`)
       .setThumbnail(member.user.displayAvatarURL({ size: 256 }))
-      .setImage('https://media.tenor.com/f5dvtvVP1ZXAAAAd/f5dvtvVP1ZX.gif')
+      .setImage('https://raw.githubusercontent.com/sakjanonkk/discord-welcome-bot/master/assets/welcome.jpg')
       .setFooter({ 
         text: `Welcome to Heaven of God • ${new Date().toLocaleDateString('th-TH')}`,
         iconURL: member.guild.iconURL()
